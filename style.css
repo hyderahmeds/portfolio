@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00ff9d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff9d;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    z-index: -1;
+}
+
+.hero-content {
+    width: 85%;
+    max-width: 1000px;
+}
+
+.small-text {
+    color: #00ff9d;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 100px);
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: clamp(25px, 4vw, 50px);
+    color: #00ff9d;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: #bbb;
+    margin: 20px 0;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+
+    text-decoration: none;
+
+    border: 1px solid #00ff9d;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #00ff9d;
+    color: black;
+}
+
+.primary:hover {
+    background: transparent;
+    color: #00ff9d;
+}
+
+.secondary {
+    color: white;
+}
+
+.secondary:hover {
+    background: #00ff9d;
+    color: black;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 120px 8%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-label {
+    color: #00ff9d;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(30px, 5vw, 55px);
+    margin-bottom: 50px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-content {
+    max-width: 750px;
+}
+
+.about-content p {
+    color: #aaa;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 15px;
+}
+
+.skill-card {
+    border: 1px solid #222;
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff9d;
+}
+
+.skill-card h3 {
+    color: #00ff9d;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #888;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #222;
+
+    padding: 35px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #00ff9d;
+}
+
+.project-number {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    border: 1px solid #333;
+    padding: 5px 10px;
+
+    font-size: 12px;
+
+    color: #00ff9d;
+}
+
+.project-card a {
+    color: #00ff9d;
+    text-decoration: none;
+}
+
+
+/* ================= LEARNING ================= */
+
+.learning-list {
+    border-top: 1px solid #222;
+}
+
+.learning-list div {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+.learning-list span {
+    color: #00ff9d;
+}
+
+.learning-list h3 {
+    font-size: 22px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #999;
+}
+
+.contact .buttons {
+    justify-content: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #222;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 25px;
+    }
+
+    .learning-list div {
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .learning-list h3 {
+        font-size: 18px;
+    }
+
+    .contact .buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .contact .btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    .section {
+        padding: 65px 16px;
+    }
+
+    .hero-content {
+        width: calc(100% - 32px);
+    }
+
+    .small-text {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-card h3 {
+        font-size: 22px;
+    }
+}
